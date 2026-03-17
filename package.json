@@ -2,19 +2,18 @@
   "name": "sqlite-backend-app",
   "version": "1.0.0",
   "description": "A backend application using SQLite for task management.",
-  "main": "src/app.ts",
+  "main": "server.js",
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "build": "tsc",
-    "migrate": "sqlite3 database.sqlite < src/database/migrations/init.sql"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "typescript": "^4.4.3",
-    "ts-node": "^10.4.0",
     "nodemon": "^2.0.12"
   },
   "author": "",
